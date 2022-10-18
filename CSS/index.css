@@ -1,0 +1,75 @@
+.h3s1{
+    display: inline;
+}
+.dealsb{
+    display: inline;
+}
+
+.gba{
+    display: inline;
+}
+.title{
+    display: inline-block;
+    position: relative;
+    top: -220px;
+}
+.price{
+    display: inline;
+    position: relative;
+    top: -220px;
+}
+.currency{
+    display: inline-block;
+    position: relative;
+    top: -220px;
+}
+.see{
+    display: inline-block;
+    position: relative;
+    top: -220px;
+    left: -1px;
+}
+.desc{
+    display: inline-block;
+    position: relative;
+    top: -160px;
+    left: -260px;
+}
+.desc span{
+    color: #50a6d8;
+}
+.reviews{
+    padding: 80px 160px;
+}
+.seeall{
+    display: inline-block;
+}
+.review h6{
+    text-align: center;
+}
+.icon{
+    display: inline;
+    position: relative;
+}
+.icont{
+    display: inline;
+    position: relative;
+}
+.icontt{
+    display: inline-block;
+    position: relative;
+}
+.rating{
+    top: -100px;
+}
+.filled {
+    color: tomato;
+}
+.artitems{
+    display: inline-block;
+    position: relative;
+    top: -40px;
+}
+.container{
+    
+}
