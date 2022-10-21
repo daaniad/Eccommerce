@@ -157,6 +157,11 @@ input.searchbar{
   height: 14vh;
 }
 
+/*Para que el navbar no se vuelva negro como todos los demás botones*/
+.navbar:hover .button{
+  background-color: var(--blanco);
+}
+
 .navbar li{
   display: inline;
   padding: var(--l) var(--l);
