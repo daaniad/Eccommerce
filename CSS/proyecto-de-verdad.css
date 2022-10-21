@@ -1,5 +1,6 @@
 :root{
   --primario: hsl(9, 69%, 24%);
+  --azul: hsl(216, 98%, 52%);
   --negro: hsl(0, 0%, 13%);
   --blanco: hsl(0, 0%, 100%);
   --secundario: hsl(120, 100%, 25%);
@@ -15,13 +16,13 @@
   --s: 8px;
   --m: 16px;
   --l: 24px;
+  --xxl:48px;
 }
 
 
 body{
     font-family: "Poppins", sans-serif;
     font-size: 17px;
-    color: #9b50d8;
     margin: 0;
   }
 
@@ -46,7 +47,7 @@ h2.upper{
   transition: 1s;
 }
 
-.button a span{
+.button a{
   color: var(--negro);
 }
 
@@ -65,18 +66,9 @@ div.logout{
   transition: 1s;
 }
 
-
+/*hover específico para botones basket y logout, recuperar en caso de querer especificar
 div .basket:hover{
   background-color: var(--negro);
-  color: var(--blanco);
-}
-
-
-div .basket:hover span{
-  color: var(--blanco);
-}
-
-div .logout:hover span{
   color: var(--blanco);
 }
 
@@ -84,6 +76,7 @@ div .logout:hover{
   color: var(--blanco);
   background-color: var(--negro);
 }
+*/
 
 /*Hacer que el span dentro de a haga algo cuando pase el ratón*/
 .banner a:hover span{
@@ -164,6 +157,11 @@ input.searchbar{
   height: 14vh;
 }
 
+/*Para que el navbar no se vuelva negro como todos los demás botones*/
+.navbar:hover .button{
+  background-color: var(--blanco);
+}
+
 .navbar li{
   display: inline;
   padding: var(--l) var(--l);
@@ -184,6 +182,35 @@ input.searchbar{
   display: flex;
   gap:var(--s)
 }
+
+div .btn-card{
+  display: flex;
+  justify-content: center;
+ padding-bottom: var(--m);
+}
+
+div .add-basket{
+  border: var(--azul) solid;
+  background-color: var(--blanco);
+}
+
+div .add-basket a{
+  color: var(--azul);
+}
+
+.button:hover{
+  background-color: var(--negro);
+}
+
+.add-basket:hover{
+  background-color: var(--azul);
+}
+
+.button:hover a{
+  color: var(--blanco);
+}
+
+
 
 .upper{
   display: flex;
@@ -217,6 +244,7 @@ div.upper{
 
 .tarjetas{
   display: flex;
+  gap: var(--xxl);
   align-items:center;
   justify-content:space-between;
   background-image: url(https://www.kh13.com/uploads/monthly_2018_10/large.gallery_45323_1604_775082.jpg.9090ccc24380e2d284e0efc9a75e57ab.jpg);
@@ -226,11 +254,14 @@ div.upper{
   background-color: var(--blanco);
   border-radius: var(--m);
   flex-direction: column;
+  margin-left: var(--m);
+  margin-bottom: var(--m);
+  margin-right: var(--l);
 }
 
 .card figure{
   overflow: hidden;
-  max-width: 304px;
+  max-width: 256px;
   height: 25%;
 }
 
@@ -240,11 +271,16 @@ div.upper{
 
 .card-holder{
   width: 25%;
-  gap: var(--s);
+}
+
+div .price-grp{
+  margin-bottom: var(--m);
 }
 
 
 div .card-content{
+  display: flex;
+  justify-content: space-between;
   text-align: center;
   flex-direction: column;
 }
@@ -254,7 +290,7 @@ div.card span{
 }
 
 div .price-grp span.filled{
-  color: var(--estrella);
+  color: var(--azul);
 }
 
 .inner{
