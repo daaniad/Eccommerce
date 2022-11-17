@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log-in</title>
+    <link rel="stylesheet" href="/CSS/proyecto-de-verdad.css" />
   </head>
   <body>
     <header>
@@ -18,16 +19,18 @@
         <h2>Login</h2>
         <h4>Proceed with previous credentials</h4>
         <form>
-        <input type="text" name="email" placeholder="Email" id="email" />
+        <input id="credentials" type="text" name="email" placeholder="Email" id="email" />
         <br />
-        <input
+        <input id="pass"
           type="password"
           name="password"
           placeholder="Password"
-          id="pass"
         />
+        <div id="wUser" class="errorUser">
+          <span>Invalid credentials, try again</span>
+        </div>
         <br />
-        <input type="submit" name="login" id="logbutton" value="Login" />
+        <button onclick="logIn()" type="button" name="login" value="Login">Login</a>
       </section>
     </form> 
     <section>
@@ -47,7 +50,10 @@
           id="ndname"
         />
         <br />
-        <input type="submit" name="sign-in" id="signin" value="Sign in now" />
+        <input type="submit" name="sign-in" id="signIn" value="Sign in now" />
+        <div id="wPassword" class="errorUser">
+          <span>Invalid credentials, try again</span>
+        </div>
       </form>
       </section>
     </main>
@@ -119,5 +125,6 @@
           <img src="/Imágenes/iconos/media-icon/youtube.png" width="50" height="50"></a>
       </div>
     </footer>
+    <script src="/js/main.js"></script>
   </body>
 </html>
