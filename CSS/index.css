@@ -1,0 +1,199 @@
+:root{
+  --primario: hsl(9, 69%, 24%);
+  --negro: hsl(0, 0%, 13%);
+  --blanco: hsl(0, 0%, 100%);
+  --secundario: hsl(120, 100%, 25%);
+  --terciario: hsl(120, 81%, 48%);
+  --gris: hsla(0, 0%, 79%, 0.45);
+  --error: hsl(0, 100%, 50%);
+
+
+  --textobase: "Poppins", sans-serif;
+
+  
+  --s: 8px;
+  --m: 16px;
+  --l: 24px;
+}
+
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    color: #9b50d8;
+  }
+
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+
+h2.upper{
+  display: inline;
+}
+
+.button{
+  padding: var(--m);
+  border: var(--negro) 2px solid;
+  border-radius: var(--s);
+  background-color: var(--blanco);
+  position: relative;
+  transition: 1s;
+}
+
+.button a span{
+  color: var(--negro);
+}
+
+
+a span.number{
+  color: var(--blanco);
+  position: absolute;
+  top: -24px;
+  left: 48px;
+  background-color: var(--negro);
+  padding: var(--s) var(--m);
+  border-radius: 80px;
+}
+
+div.logout{
+  transition: 1s;
+}
+
+
+div .basket:hover{
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+
+div .basket:hover span{
+  color: var(--blanco);
+}
+
+div .logout:hover span{
+  color: var(--blanco);
+}
+
+div .logout:hover{
+  color: var(--blanco);
+  background-color: var(--negro);
+}
+
+/*Hacer que el span dentro de a haga algo cuando pase el ratón*/
+.banner a:hover span{
+  opacity: 1;
+}
+
+
+.navbar li span{
+  color: #9b50d8;
+}
+
+  h1{
+    margin-top: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--blanco);
+    font-size: 3.052rem;
+  }
+  h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 2.441rem;
+    color: #d85081;
+  }
+  h3{
+    font-family: "Poppins", sans-serif;
+    color: #9b50d8;
+    font-size: 1.953rem;
+  }
+  h4{
+    font-family: "Poppins", sans-serif;
+    color: #d85081;
+    font-size: 1.563rem;
+  }
+  h5{
+    font-family: "Poppins", sans-serif;
+    color: #d85081;
+    font-size: 1.25rem;
+  }
+  h6, small{
+    font-family: "Poppins", sans-serif;
+    color: #d85081;
+    font-size: 0.8rem
+  }
+
+.input-grp{
+  box-sizing: border-box;
+  }
+
+input.searchbar{
+  padding: var(--l);
+  border: var(--negro) 2px solid;
+  border-radius: var(--s);
+  font-weight: bold;
+  text-align:left;
+}
+
+.container{
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    height: 80vh;
+    max-width: 100%;
+    margin: 0 auto;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.navbar{
+  background-image: url(https://www.kh13.com/uploads/monthly_2018_10/65ec68b8c6284deebaa347680f7c0b06.jpg.ab151c5ffb6dfa48fd7f37c670a21cbc.jpg);
+  align-items: flex-start;
+  height: 10vh;
+}
+
+.navbar li{
+  display: inline;
+  padding: var(--l) var(--l);
+  transition: 1s;
+}
+
+.navbar li:hover{
+  border-radius: var(--m);
+  border-bottom: var(--negro) 2px solid;
+  border-top: var(--negro) 2px solid;
+}
+
+.navbar li span{
+  color: var(--negro);
+}
+
+.buttons{
+  display: flex;
+  gap:var(--s)
+}
+
+.upper{
+  display: flex;
+  align-items:flex-start;
+  justify-content: center;
+  height: 10vh;
+}
+
+div.upper{
+  background-color: var(--negro);
+}
+
+
+.header-inner{
+  padding: 48px 8px;
+  background-position: center;
+  height: 1vh;
+  background-color: var(--gris);
+}
+
+.article{
+  background-image: url(https://www.kh13.com/uploads/monthly_2018_10/large.gallery_45323_1604_775082.jpg.9090ccc24380e2d284e0efc9a75e57ab.jpg);
+}

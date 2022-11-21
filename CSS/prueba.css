@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+
+}
+
+header{
+    background-color: rgb(111, 102, 121);
+}
+
+
+.container{
+    max-width: 992px;
+    margin: 0 auto;
+}
+header .container.header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 8px;
+}
+
+nav.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.menu ul li{
+    display: inline-block;
+}
+
+nav.menu ul li a{
+    display: block;
+    padding: 16px 8px;
+    text-decoration: none;
+}
+
+.logo{
+    max-width: 240px;
+    max-height: 80px;
+}
+
+header .container.header-inner.superior a{
+    display: block;
+    text-decoration: none;
+}

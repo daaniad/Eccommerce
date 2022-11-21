@@ -1,0 +1,19 @@
+:root{
+    --primario: tomato;
+    --negro: black;
+    --blanck: white;
+    --secundario: green;
+    --gris: grey;
+
+    
+    --s: 8px;
+    --m: 16px;
+    --l: 24px;
+}
+
+
+
+
+.color-primario{
+    background-color: var(--primario);
+}
