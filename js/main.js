@@ -48,40 +48,38 @@ function inIt(){
         if (this.readyState == 4 && this.status == 200) {
     
             const productosDestacados = JSON.parse(this.responseText)
-            let htmlContent = "<ul><li><span>Malaga</span></li></ul>";
+            let htmlContent = "";
     
             for (i = 0; i < productosDestacados.length; i++) {
-            htmlContent += `<li>
-            
-            <div class="card-holder">
-            <article class="card">
-              <figure>
-                <img src="/Imágenes/POP/All Might no bg.png" alt="All Might">
-              </figure>
-              <div class="card-content">
-                <h3 class="card-title">${productosDestacados[i].nombre}</h3>
-                <div class="price-grp">
-                  <span>${productosDestacados[i].precio}</span>
-                  <span class="currency">€</span>
-                  <span> class
-                  <div class="rating">
-                    <span class="rate"><span class="rate filled"><i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i></span>
-                      <i class="bi bi-star-fill"></i></span>
+            htmlContent += `
+              <article class="card">
+                <figure>
+                  <img src="/Imágenes/POP/All Might no bg.png" alt="All Might">
+                </figure>
+                <div class="card-content">
+                  <h3 class="card-title">${productosDestacados[i].nombre}</h3>
+                  <div class="price-grp">
+                    <span>${productosDestacados[i].precio}</span>
+                    <span class="currency">€</span>
+                    <div class="rating">
+                      <span class="rate"><span class="rate filled"><i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i></span>
+                        <i class="bi bi-star-fill"></i></span>
+                    </div>
                   </div>
-                </div></li>
-
-                <div class="buttons btn-card">
-                <div class="button add-basket">
-                  <a href="#">Add to Basket</a>
                 </div>
-                  <div class="button secondary">
-                    <a href="/Details.html">See</a>
+  
+                <div class="buttons btn-card">
+                  <div class="button add-basket">
+                    <a href="#">Add to Basket</a>
                   </div>
-
-                </div>`
+                    <div class="button secondary">
+                      <a href="#">See</a>
+                    </div>
+  
+              </article>`
             
             
             }
@@ -96,3 +94,39 @@ function inIt(){
     request.setRequestHeader("app-id", "63768da658fe3b011c6f1da1");
     request.send();
     }
+
+
+    function detalle (){
+      console.log('Website loaded successfully!');
+      let request =  new XMLHttpRequest();
+      request.onreadystatechange = function() {
+          console.log(`estado actual ${this.readyState}`);
+      
+          if (this.readyState == 4 && this.status == 200) {
+      
+              const detalleProd = JSON.parse(this.responseText)
+              let htmlContent = "<ul><li><span>Malaga</span></li></ul>";
+      
+              for (i = 0; i < detalleProd.length; i++) {
+              htmlContent += `<ul><li>${detalleProd[i].nombre}</li>
+              <li>${detalleProd[i].code}</li>
+              <li>${detalleProd[i].desc}</li>
+              <li>${detalleProd[i].price}</li>
+              <li>${detalleProd[i].color}
+              <li>${detalleProd[i].dimension}</li></li>`
+              
+              
+              }
+      
+              let entriesDiv = document.getElementById('showEntries');
+              entriesDiv.innerHTML= htmlContent;
+              
+          }
+      }
+      request.open("GET", "http://127.0.0.1:8000/detalles", true);
+    
+      request.setRequestHeader("app-id", "63768da658fe3b011c6f1da1");
+      request.send();
+    }
+
+    
