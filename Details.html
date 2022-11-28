@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details</title>
 </head>
-<body>
+<body onload="detallesAPIDataBase()">
     <header>
         <a href="index.html">
           <img src="/Imágenes/Flotadores/pato.png" width="50" height="50"
@@ -33,14 +33,16 @@
       </navbar>
       <main>
         <section>
-            <img src="/Imágenes/Flotadores/ducky.png" width="400" height="400">
-            <h6>All products/Kids</h6>
-            <h2>Ducky Float #987564</h2>
-            <h4>Feel like the coolest kid on the pool with our ducky float!</h4>
+            <img src="/Imágenes/POP/All Might no bg.png" width="400" height="400">
+            <h6>All products/Boku No Hero</h6>
+            <h2>All Might Silver Age #987564</h2>
+            <h4>Revive the best moments of the anime with All Might POP!</h4>
             <h4>20$</h4>
             <input type="number" min="1" placeholder="-1+">
             <button type="button">Add to basket</button>
             <h5>2 years inssurance</h5>
+
+            <div id="detalle"></div>
         </section>
         <section>
             <div>
@@ -153,4 +155,5 @@
         </div>
       </footer>
     </body>
+    <script src="/js/main.js"></script>
   </html>

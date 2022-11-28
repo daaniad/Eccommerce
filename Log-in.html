@@ -17,8 +17,9 @@
       <section>
         <h2>Login</h2>
         <h4>Proceed with previous credentials</h4>
-        <form>
+        <!--<form>-->
         <input type="text" name="email" placeholder="Email" id="email" />
+        <div id="success"></div>
         <br />
         <input
           type="password"
@@ -26,29 +27,37 @@
           placeholder="Password"
           id="pass"
         />
+        <div id="invalid"></div>
         <br />
-        <input type="submit" name="login" id="logbutton" value="Login" />
+        <input onclick="logInDataBase()" type="submit" name="login" id="logbutton" value="Login" />
       </section>
-    </form> 
+    <!--</form>--> 
     <section>
-      <form>
+      <!--<form>-->
         <h2>Sign in</h2>
         <h4>
           Sign up today to obtain your first sale for any product in Flotaworld!
         </h4>
         <input type="text" name="name" placeholder="Fist Name" id="name" />
         <br />
-        <input type="text" name="mname" placeholder="Middle Name" id="mname" />
-        <br />
         <input
           type="text"
           name="ndname"
           placeholder="Second Name"
-          id="ndname"
+          id="surname"
         />
         <br />
-        <input type="submit" name="sign-in" id="signin" value="Sign in now" />
-      </form>
+        <input type="text" name="email" placeholder="email" id="emailSignup" />
+        <br>
+        <input type="text" name="password" placeholder="password" id="passSignup" />
+        <br>
+        <input type="text" name="phone number" placeholder="Phone Number" id="phoneNumber" />
+        <br>
+        <input onclick="signupDataBase()" type="submit" name="sign-up" id="signup" value="Sign up now" />
+        <div id="successSignup">
+          
+        </div>
+      <!--</form>--> 
       </section>
     </main>
     <br />
@@ -120,4 +129,5 @@
       </div>
     </footer>
   </body>
+  <script src="/js/main.js"></script>
 </html>

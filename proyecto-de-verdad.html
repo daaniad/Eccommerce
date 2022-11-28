@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="/Imágenes/POP/Sora_logo-removebg.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   </head>
-  <body>
+  <body onload="inIt()">
     <header>
       <div class="container upper">
         <div class="title">
@@ -32,7 +32,7 @@
         </div>
         <div class="buttons">
         <div class="button basket">
-          <a href="#">Basket<span class="number">5</span></span></a>
+          <a href="#">Basket<span id = "basketNumber" class="number">0</span></span></a>
         </div>
         <div class="button logout">
           <a href="#"><span>Logout</span></a>
@@ -55,6 +55,7 @@
         </div>
       </div>
       </nav>
+      <!--Aqui cierra el navbar-->
 
       <div class="container inner">
         <h2>Get the best October sellers!</h2>
@@ -87,7 +88,7 @@
                   <a href="#">Add to Basket</a>
                 </div>
                   <div class="button secondary">
-                    <a href="#">See</a>
+                    <a href="Details.html">See</a>
                   </div>
 
             </article>
@@ -147,7 +148,7 @@
 
               <div class="buttons btn-card">
                 <div class="button add-basket">
-                  <a href="#">Add to Basket</a>
+                  <a onclick="addToCart()" href="#">Add to Basket</a>
                 </div>
                   <div class="button secondary">
                     <a href="#">See</a>
@@ -159,7 +160,7 @@
           <div class="card-holder">
             <article class="card">
               <figure>
-                <img src="/Imágenes/POP/All Might no bg.png" alt="All Might">
+                <img src="/Imágenes/POP/Eve-removebg-preview.png" alt="All Might">
               </figure>
               <div class="card-content">
                 <h3 class="card-title">All Might Silver Age</h3>
@@ -187,7 +188,7 @@
             </article>
           </div>
       </div>
-
+      <!--Aquí cierra el contenedor de tarjetas-->
 
 
           <div class="container tarjetas">
@@ -322,6 +323,12 @@
               </article>
             </div>
           </div>
+          <!--Aquí cierra el contenedor de tarjetas-->
+          <div class="container tarjetas">
+            <div class="card-holder" id="showEntries"></div>
+          </div>
     </section>
+    
   </body>
+  <script src="/js/main.js"></script>
 </html>

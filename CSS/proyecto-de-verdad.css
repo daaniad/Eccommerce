@@ -250,6 +250,7 @@ div.upper{
   background-image: url(https://www.kh13.com/uploads/monthly_2018_10/large.gallery_45323_1604_775082.jpg.9090ccc24380e2d284e0efc9a75e57ab.jpg);
 }
 
+
 .card{
   background-color: var(--blanco);
   border-radius: var(--m);
@@ -263,10 +264,15 @@ div.upper{
   overflow: hidden;
   max-width: 256px;
   height: 25%;
+  transition: 0.8s;
 }
 
 .card figure img{
   max-width: 100%;
+}
+
+.card figure:hover{
+  transform: scale(1.5)
 }
 
 .card-holder{

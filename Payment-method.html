@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment method</title>
+    <link rel="stylesheet" href="/CSS/proyecto-de-verdad.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro">
+    <link rel="shortcut icon" href="/Imágenes/POP/Sora_logo-removebg.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   </head>
   <body>
     <header>
@@ -28,7 +34,7 @@
             </form>
                 <h2>My Cards</h2>
                 <input type="radio" name="card" id="card" value="6789">
-                <label for="card">Visa ending 6789</label>
+                <label for="card">Visa ending 1111</label>
                 <br>
                 <input type="radio" name="card" id="card2" value="6659">
                 <label for="card2">Visa ending 6659</label>
@@ -36,7 +42,48 @@
                 <input type="radio" name="card" id="card3" value="6986">
                 <label for="card3">Visa ending 6986</label>
                 <br>
-                <button type="button">Pay with this card</button>
+                
+
+
+                <section>
+                  <div class="container tarjetas">
+                    <div class="card-holder">
+                      <article class="card">
+                        <figure>
+                          <img src="/Imágenes/POP/All Might no bg.png" alt="All Might">
+                        </figure>
+                        <div class="card-content">
+                          <h3 class="card-title">All Might Silver Age</h3>
+                          <div class="price-grp">
+                            <span>20</span>
+                            <span class="currency">€</span>
+                            <div class="rating">
+                              <span class="rate"><span class="rate filled"><i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i></span>
+                                <i class="bi bi-star-fill"></i></span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="buttons btn-card">
+                          <div class="button add-basket">
+                            <a href="#">Add to Basket</a>
+                          </div>
+                            <div class="button secondary">
+                              <a href="Details.html">See</a>
+                            </div>
+          
+                      </article>
+                    </div>
+                  </div>
+                  <button onclick="payCard()" type="button">Pay with this card</button>
+                </section>
+
+
+
+
               <form>
                 <h2>Add new card</h2>
                 <input type="number" name="cardnumber" id="ncardnumb" placeholder="Card Number">
