@@ -273,20 +273,22 @@ function inIt(){
 
           function payCard() {
             console.log(`Website loaded successfully!`);
+            const productoUno = {productoid: "1", cantidad: "1", precio: 20};
+            const productoDos = {productoid: "2", cantidad: "1", precio: 20};
+            let productos = [productoUno, productoDos]
+            let total = 0;
+            for (p of productos) {
+              total += p.precio
+            }
+
             const request = new XMLHttpRequest ();
             request.onreadystatechange = function() {
               console.log(`estado actual ${this.readyState}`);
-              if (this.readyState == 4 && this.status == 200) {
-        
             }
-              else if (this.readyState == 4 && this.status == 400) {
-                
-              }
-          }
           
-          let passSignup = document.getElementById('passSignup').value;
-          let body = {};
+          
+          let payload = {productos: productos, total: total};
           request.open("POST", `http://127.0.0.1:8000/orders`, true);
           request.setRequestHeader("Content-Type", "application/json");
-          request.send(JSON.stringify(body));
+          request.send(JSON.stringify(payload));
           }
