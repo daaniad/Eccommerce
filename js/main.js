@@ -349,10 +349,10 @@ function ordersMongo() {
                 <img src="/Imágenes/POP/All Might no bg.png" alt="All Might">
               </figure>
               <div class="card-content">
-                <span class="card-title">${response[i].usuario[0]}</span>
+                <span class="card-title">${response[i].usuario[0].nombre}</span>
                 <h3 class="card-title">${response[i].nombre}</h3>
                 <div class="price-grp">
-                  <span>${response[i].precio}</span>
+                  <span>${response[i].total}</span>
                   <span>Stock ${response[i].stock}</span>
                   <div class="rating">
                     <span class="rate"><span class="rate filled"><i class="bi bi-star-fill"></i>
@@ -383,3 +383,153 @@ function ordersMongo() {
   request.open("GET", `http://127.0.0.1:8000/pedido`, true);
   request.send();
 }
+
+
+
+
+
+
+
+
+  function productoDestacados() {
+    console.log("Website loaded successfully!");
+      console.log(`estado actual ${this.readyState}`);
+  
+    fetch("http://localhost:8000/productodestacados")
+    .then((response) => {
+       return response.json();
+    }).then((data) => {
+        let htmlContent = "";
+  
+        for (i = 0; i < data.length; i++) {
+          htmlContent += `<div class="card-holder">
+              <article class="card">
+                <figure>
+                  <img src="/Imágenes/POP/All Might no bg.png" alt="All Might">
+                </figure>
+                <div class="card-content">
+                  <span class="card-title">${data[i].id}</span>
+                  <h3 class="card-title">${data[i].nombre}</h3>
+                  <div class="price-grp">
+                    <span>${data[i].precio}</span>
+                    <span>Stock ${data[i].stock}</span>
+                    <div class="rating">
+                      <span class="rate"><span class="rate filled"><i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i></span>
+                        <i class="bi bi-star-fill"></i></span>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="buttons btn-card">
+                  <div class="button add-basket">
+                    <a href="#">Add to Basket</a>
+                  </div>
+                    <div class="button secondary">
+                      <a href="Details.html">See</a>
+                    </div>
+  
+              </article>
+            </div>`;
+        }
+        let entriesDiv = document.getElementById("showEntries");
+        entriesDiv.innerHTML = htmlContent;
+      })
+      .catch((error) => {
+        console.log(error);
+  
+        
+    });
+    };
+
+
+
+    function logInDataBases() {
+      console.log(`Website loaded successfully!`);
+      let loginEmail = document.getElementById("email").value;
+      let loginPass = document.getElementById("pass").value;
+      let body = { email: loginEmail, password: loginPass };
+      
+        console.log(`estado actual ${this.readyState}`);
+        let success = document.getElementById("success");
+        fetch("http://localhost:8000/loginfetch", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+        
+        
+    }).then((response) => {
+        console.log(response.status);
+        if (response.status == 401) {
+          throw "not authorised";
+        }
+    }).then((ok) => {
+        console.log(ok);
+        success.innerHTML = `<span>Logged in successfully<span>`;
+    }).catch((error) => {
+        console.log(error);
+        success.innerHTML = `<span>Invalid credentials<span>`;
+    });
+        
+      
+        
+    }
+    
+    //Fetch POST
+    fetch("http://localhost:8000/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+    }).then((response) => {
+        return response.json();
+    }).then((data) => {
+        console.log(data.length);
+    }).catch((error) => {
+        console.log(error);
+    });
+
+  
+
+  // Fetch
+
+
+
+
+
+/*let url = "http://localhost:8080/crearusuariopost";
+    
+    const data = {
+        "usuario": nombreUsuario,
+        "apellidos": apellidosUsuario,
+        "password": passwordUsuario
+    } 
+
+//XMLHttpRequest
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+        }
+    }
+
+    xhttp.open("POST", url, true);
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.send(JSON.stringify(data));
+    
+    
+    // Fetch
+    const request = fetch("http://localhost:8080/crearusuariopost");
+    request.then(function(pedidos) {
+       pedidos.forEach(function(pedido) {
+
+       });
+    }).catch(function(error) {
+        console.log(error);
+    });
+    */
