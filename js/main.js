@@ -496,6 +496,32 @@ function ordersMongo() {
 
   
 
+    //Fetch es igual que la async function de abajo
+ 
+    fetch("http://localhost:8000/productos%22")
+    .then((response) => {
+        return response.json();
+    }).then((data) => {
+        console.log(data.length);
+    }).catch((error) => {
+        console.log(error);
+    });
+
+
+    //Igual que fetch
+    async function obtenerProductos() {
+    try {
+        let response = await fetch("http://localhost:8000/productos%22");
+        let data = await response.json();
+
+        console.log(data.length);
+
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
   // Fetch
 
 
